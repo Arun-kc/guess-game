@@ -49,15 +49,15 @@ jsonData = `[
 ]
 `
 const characterList = JSON.parse(jsonData)
-console.log(characterList)
+// console.log(characterList)
 
 function guess() {
     let value = document.getElementById("input-el").value
     let imgSrc = document.getElementById("random-img").src
     //characterList = getJsonData()
-    console.log(typeof characterList[index])
-    console.log(characterList[index].src)
-    console.log(value.toLowerCase())
+    // console.log(typeof characterList[index])
+    // console.log(characterList[index].src)
+    // console.log(value.toLowerCase())
     if(imgSrc.includes(characterList[index].src) && value.toLowerCase() != "" &&
     (value.toLowerCase() === characterList[index].name.toLowerCase() || characterList[index].name.toLowerCase().includes(value.toLowerCase()))
     ) {
@@ -81,7 +81,7 @@ function random() {
         document.getElementById("score").style.display = 'block'
 
     } else {
-        console.log(`characters/${characterList[index].src}.jpg`)
+        // console.log(`characters/${characterList[index].src}.jpg`)
         document.getElementById("random-img").src = `characters/${characterList[index].src}.jpg`
     }
 }
