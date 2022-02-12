@@ -5,59 +5,62 @@
 // let inputEl = document.getElementById("input-el")
 let index = 0
 let score = 0
-jsonData = `[
-    {
-        "src": "luffy",
-        "name":"Monkey D Luffy"
-    },
-    {
-        "src": "naruto",
-        "name":"Uzumaki Naruto"
-    },
-    {
-        "src": "goku",
-        "name":"Goku"
-    },
-    {
-        "src": "eren",
-        "name":"Eren Yeager"
-    },
-    {
-        "src": "ichigo",
-        "name":"Ichigo Kurosaki"
-    },
-    {
-        "src": "midoriya",
-        "name":"Izuku Midoriya"
-    },
-    {
-        "src": "asta",
-        "name":"Asta"
-    },
-    {
-        "src": "tanjiro",
-        "name":"Tanjiro Kamado"
-    },
-    {
-        "src": "kakashi",
-        "name":"Kakashi Hatake"
-    },
-    {
-        "src": "gojo",
-        "name":"Satoru Gojo"
-    }
-]
-`
-const characterList = JSON.parse(jsonData)
-// console.log(characterList)
+// jsonData = `[
+//     {
+//         "src": "luffy",
+//         "name":"Monkey D Luffy"
+//     },
+//     {
+//         "src": "naruto",
+//         "name":"Uzumaki Naruto"
+//     },
+//     {
+//         "src": "goku",
+//         "name":"Goku"
+//     },
+//     {
+//         "src": "eren",
+//         "name":"Eren Yeager"
+//     },
+//     {
+//         "src": "ichigo",
+//         "name":"Ichigo Kurosaki"
+//     },
+//     {
+//         "src": "midoriya",
+//         "name":"Izuku Midoriya"
+//     },
+//     {
+//         "src": "asta",
+//         "name":"Asta"
+//     },
+//     {
+//         "src": "tanjiro",
+//         "name":"Tanjiro Kamado"
+//     },
+//     {
+//         "src": "kakashi",
+//         "name":"Kakashi Hatake"
+//     },
+//     {
+//         "src": "gojo",
+//         "name":"Satoru Gojo"
+//     }
+// ]
+// `
+let characterList = []
+const jsonData = async () => {
+    const response = await fetch('/data/character_list.json')
+    let data = await response.json()
+    characterList = data
+    return data
+} 
+jsonData()
+
 
 function guess() {
     let value = document.getElementById("input-el").value
     let imgSrc = document.getElementById("random-img").src
-    //characterList = getJsonData()
-    // console.log(typeof characterList[index])
-    // console.log(characterList[index].src)
-    // console.log(value.toLowerCase())
     if(imgSrc.includes(characterList[index].src) && value.toLowerCase() != "" &&
     (value.toLowerCase() === characterList[index].name.toLowerCase() || characterList[index].name.toLowerCase().includes(value.toLowerCase()))
     ) {

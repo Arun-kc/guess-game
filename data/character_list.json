@@ -1,10 +1,42 @@
 [
     {
-        "scr": "luffy.jpg",
+        "src": "luffy",
         "name":"Monkey D Luffy"
     },
     {
-        "scr": "naruto.jpg",
+        "src": "naruto",
         "name":"Uzumaki Naruto"
+    },
+    {
+        "src": "goku",
+        "name":"Goku"
+    },
+    {
+        "src": "eren",
+        "name":"Eren Yeager"
+    },
+    {
+        "src": "ichigo",
+        "name":"Ichigo Kurosaki"
+    },
+    {
+        "src": "midoriya",
+        "name":"Izuku Midoriya"
+    },
+    {
+        "src": "asta",
+        "name":"Asta"
+    },
+    {
+        "src": "tanjiro",
+        "name":"Tanjiro Kamado"
+    },
+    {
+        "src": "kakashi",
+        "name":"Kakashi Hatake"
+    },
+    {
+        "src": "gojo",
+        "name":"Satoru Gojo"
     }
 ]
