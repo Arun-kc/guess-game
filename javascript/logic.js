@@ -61,9 +61,9 @@ jsonData()
 function guess() {
     let value = document.getElementById("input-el").value
     let imgSrc = document.getElementById("random-img").src
-    if(imgSrc.includes(characterList[index].src) && value.toLowerCase() != "" &&
-    (value.toLowerCase() === characterList[index].name.toLowerCase() || characterList[index].name.toLowerCase().includes(value.toLowerCase()))
-    ) {
+    if(imgSrc.includes(characterList[index].src + '.jpg') && value.toLowerCase() != "" &&
+    (value.toLowerCase() === characterList[index].name.toLowerCase() || value.toLowerCase() === characterList[index].src.toLowerCase())
+    )  {
         document.getElementById("success-msg").style.display = 'block'
         score += 1
     } else {
